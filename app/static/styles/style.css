@@ -1,0 +1,44 @@
+html, body {
+  overflow-x : hidden;
+  width : 100%;
+  height : 100%;
+  margin : 0;
+  padding : 0;
+}
+body {
+  font-family : 'Roboto Slab', serif;
+  font-weight : 400;
+}
+img {
+  width : auto;
+  max-width : 100%;
+  height : auto;
+}
+.container {
+  display : flex;
+  flex-direction : column;
+  justify-content : space-evenly;
+  width : 50%;
+  margin : 0 auto;
+}
+#trying {
+  font-weight : 700;
+}
+.title {
+  text-align : center;
+}
+.photos {
+  display : flex;
+  justify-content : space-evenly;
+  width : 50%;
+  margin : 0 auto;
+}
+.outer {
+  display : flex;
+  flex-direction : column;
+  margin-right : 1em;
+  margin-left : 1em;
+}
+.inner {
+  display : flex;
+}
