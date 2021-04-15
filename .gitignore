@@ -1,9 +1,9 @@
 .idea/
-__pycache__/
+**/__pycache__
 loleivenv/
 venv/
 lolei.ini
 requirements.txt
 app/static/img/
 app/static/favicon.ico
-app/__pychache__/
+app/static/templates/posts.html
