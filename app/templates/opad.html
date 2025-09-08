@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Lolei's Journal / OPAD{% endblock %}
+
+{% block content %}
+
+<h2 id='trying' class="title text-light" style="color : white"><b><a href="/" class="text-info">lolei.uk</a> / OPAD</b></h2>
+
+<p class="title text-light" style="color : white; max-width: 300mm; margin-left: auto; margin-right: auto;">
+    This is a project that was inspired by a few different things, but mainly
+    <a href="https://www.youtube.com/watch?v=lSwqx-xiUhs">this video</a> from 
+    <a href="https://www.youtube.com/@KarinMajoka">Karin Majoka</a>. I don’t know how long I’ll 
+    last, but I’m aiming for a year. As you can see from this website, I predominantly shoot 
+    film, however there won’t be much of that here, if any, due to practicality. I will 
+    try to vary the cameras I use a bit, but the main focus is thinking about photography more. 
+    I may sometimes also write some notes on a photograph if I have any, and will include what 
+    camera each one was taken on.
+</p>
+
+<h4 class="title text-light" style="color : white; max-width: 300mm; margin-left: auto; margin-right: auto;">
+        <b>Current Goal</b>:
+        <span style="text-decoration: line-through;">30</span> 
+        <span style="text-decoration: line-through;">50</span> 
+        <span style="text-decoration: line-through;">100</span>
+        <span style="text-decoration: line-through;">150</span>
+        <b>182</b>
+        <b>days</b>
+</h4>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-04') }}">
+            April 2025
+        </a>
+    </h3>
+</div>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-05') }}">
+            May 2025
+        </a>
+    </h3>
+</div>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-06') }}">
+            June 2025
+        </a>
+    </h3>
+</div>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-07') }}">
+            July 2025
+        </a>
+    </h3>
+</div>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-08') }}">
+            August 2025
+        </a>
+    </h3>
+</div>
+
+<div class="card mb-3 bg-dark" style="max-width: 300mm; margin-left: auto; margin-right: auto;"">
+    <h3 style="margin-left: auto; margin-right: auto;">
+        <a class="text-info" href="{{ url_for('show_month', month_key='2025-09') }}">
+            September 2025
+        </a>
+    </h3>
+</div>
+
+{% endblock %}

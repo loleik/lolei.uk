@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 id='trying' class="title text-light" style="color : white"><b>Lolei's Journal</b></h2>
+<p class="title text-light" style="color : white">This is a place for me to share and write about things I'm 
+    doing, most of which is photography for now.
+</p>
+
+
+<div id="preview" class="carousel slide" data-ride="carousel" data-interval="5500" style="padding-bottom : 10px">
+    <div class="carousel-inner">
+        {% for i in range(1, 6) %}
+            {% if i == 1 %}
+                <div class="carousel-item active">
+                    <img class="d-block w-100 img-fluid"
+                            src="{{ url_for('static', filename='img/preview/' + i ~ '.jpg') }}"
+                            style="max-width : 800px; margin-left : auto; margin-right : auto"
+                    >
+                </div>
+            {% else %}
+                <div class="carousel-item">
+                    <img class="d-block w-100 img-fluid"
+                            src="{{ url_for('static', filename='img/preview/' + i ~ '.jpg') }}"
+                            style="max-width : 800px; margin-left : auto; margin-right : auto"
+                    >
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

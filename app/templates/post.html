@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Lolei's Journal / {{ title }}{% endblock %}
+
+{% block content %}
+
+<h2 id='trying' class="title text-light" style="color : white">
+    <b>
+        <a href="/" class="text-info">lolei.uk</a> / 
+        <a href="/posts" class="text-info">Posts</a> /
+        {{ post['title'] }}
+    </b>
+</h2>
+
+<div class="markdown-body card mb-3 bg-dark">
+    <small class="text-light" style="padding-top: 10px; margin-left: auto; margin-right: auto;">
+        {{ post['date'] }}
+    </small>
+
+    {{ post['html'] | safe }}
+</div>
+
+{% endblock %}

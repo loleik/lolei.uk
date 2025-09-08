@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@200..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link href="{{ url_for('static',filename='styles/style.css') }}" rel='stylesheet'>
+        
+        <title>
+            {% block title %}Lolei's Journal{% endblock %}
+        </title>
+    </head>
+    <body style="background-color : #272c30;">
+        {% block content %}{% endblock %}
+
+        <nav class="navbar navbar-dark bg-dark" style="max-width: 400mm; margin-left: auto; margin-right: auto;">
+            <a class="nav-link text-info" href='#photos' data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="photos">
+               Photos
+            </a>
+
+            <a class="nav-link text-info" href='#posts' data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="posts">
+               Posts
+            </a>
+
+            <a class="nav-link text-info" href="{{ url_for('rust_test') }}"
+            role="button" aria-expanded="false">
+                Rust Experiments
+            </a>
+
+            <a class="nav-link text-info" href='#links' data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="links">
+               Links
+            </a>
+        </nav>
+
+
+        <script>
+            $(document).ready(function(){
+                $('.collapse').on('show.bs.collapse', function () {
+                    $('.collapse.show').each(function(){
+                        $(this).collapse('hide');
+                    });
+                });
+            });
+        </script>
+
+        <div id="posts" class="collapse bg-dark" style="padding: 10px; max-width: 400mm; margin-left: auto; margin-right: auto;">
+            <ul>
+                <li><a class="text-info" href='{{ url_for('opad') }}'>
+                    One Photo A Day
+                </a></li>
+                <li><a class="text-info" href='{{ url_for('posts') }}'>
+                    All Posts
+                </a></li>
+            </ul>
+        </div>
+
+        <div id="photos" class="collapse bg-dark" style="padding: 10px; max-width: 400mm; margin-left: auto; margin-right: auto;">
+            <ul>
+                <li><a class="text-info" href='{{ url_for('photos_archive_main') }}'>
+                    Archive
+                </a></li>
+            </ul>
+        </div>
+
+        <div id="links" class="collapse bg-dark" style="padding: 10px; max-width: 400mm; margin-left: auto; margin-right: auto;">
+            <ul>
+                <li>
+                    <a class="text-info" href="https://github.com/loleik">
+                        Github
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
