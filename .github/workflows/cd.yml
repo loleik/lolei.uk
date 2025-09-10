@@ -19,5 +19,5 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build Docker image
-    run: |
+      run: |
         docker build -t ghcr.io/${{ github.loleik }}/lolei-app:latest .
