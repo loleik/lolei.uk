@@ -38,5 +38,5 @@ jobs:
 
     - name: Stop container
       run: |
-	docker stop lolei-app-ci
-	docker rm lolei-app-ci
+        docker stop lolei-app-ci
+        docker rm lolei-app-ci
