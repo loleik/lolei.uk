@@ -29,7 +29,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t ghcr.io/loleik/lolei-app:latest .
+        docker tag ghcr.io/loleik/lolei-app:latest \
+               ghcr.io/loleik/lolei-app:${{ github.sha }}
 
     - name: Push Docker image to GHCR
       run: |
         docker push ghcr.io/loleik/lolei-app:latest
+        docker push ghcr.io/<username>/lolei-app:${{ github.sha }}
