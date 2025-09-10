@@ -35,4 +35,4 @@ jobs:
     - name: Push Docker image to GHCR
       run: |
         docker push ghcr.io/loleik/lolei-app:latest
-        docker push ghcr.io/<username>/lolei-app:${{ github.sha }}
+        docker push ghcr.io/loleik/lolei-app:${{ github.sha }}

@@ -1,0 +1,21 @@
+{
+  "name": "cgol-rust-wasm",
+  "type": "module",
+  "description": "WebAssembly version of my Conway's Game of Life implementation",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loleik/cgol-rust-wasm"
+  },
+  "files": [
+    "cgol_rust_wasm_bg.wasm",
+    "cgol_rust_wasm.js",
+    "cgol_rust_wasm.d.ts"
+  ],
+  "main": "cgol_rust_wasm.js",
+  "types": "cgol_rust_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
