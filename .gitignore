@@ -211,4 +211,5 @@ deploy.py
 include/
 **/bak/
 app/**/*.txt
+
 **/img/*
