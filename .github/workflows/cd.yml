@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -36,3 +37,11 @@ jobs:
       run: |
         docker push ghcr.io/loleik/lolei-app:latest
         docker push ghcr.io/loleik/lolei-app:${{ github.sha }}
+
+  notify-failiure:
+    if: ${{ github.event.workflow_run.conclusion == 'failiure' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Notify Failiure
+      run: echo "## CI failed - skipping deployment" >> $GITHUB_STEP_SUMMARY
