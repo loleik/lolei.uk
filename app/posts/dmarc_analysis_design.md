@@ -46,7 +46,7 @@ erDiagram
     }
 ```
 
-As you can see, we have a `reports` table, which will contain information within each individual XML file. The primary key is the `report_id`, which we will let PostgreSQL sort out, and it will be unique by design. The rest of the fields are extracted from the XML files. They correspond to the organisation name, the timestamps of the beggining and end of the reporting period, and the report ID assigned by the sender of the report which is also unique. Then we have a `records` table, which will contain the various reports that are contained within each report. The public key of this table is `record_id`, which will be defined in a similar way to `report_id`. The `report_id` acts as a foreign key, creating a relationship between the tables. The rest of the fields are again extracted from records within reports.
+As you can see, we have a `reports` table, which will contain information within each individual XML file. The primary key is the `report_id`, which we will let PostgreSQL sort out, and it will be unique by design. The rest of the fields are extracted from the XML files. They correspond to the organisation name, the timestamps of the beginning and end of the reporting period, and the report ID assigned by the sender of the report which is also unique. Then we have a `records` table, which will contain the various reports that are contained within each report. The public key of this table is `record_id`, which will be defined in a similar way to `report_id`. The `report_id` acts as a foreign key, creating a relationship between the tables. The rest of the fields are again extracted from records within reports.
 
 The relationship between these tables is __One (Mandatory) to Zero or More (Optional)__. This means that each report, which must exist, can contain zero or more records, which may not exists.
 
@@ -108,7 +108,7 @@ Here are the SQL statements for creating the tables, with an `INSERT` statement 
         'pass/fail'
     );
     ```
-    Again, we don't need to explicitely define `record_id` as it's defined as a `SERIAL PRIMARY KEY`. We do need to specify the `report_id` of the report the record is in though, which we can get by querying the database using the `external_report_id`.
+    Again, we don't need to explicitly define `record_id` as it's defined as a `SERIAL PRIMARY KEY`. We do need to specify the `report_id` of the report the record is in though, which we can get by querying the database using the `external_report_id`.
 
 That's the setup for the database that I used for the rest of this project. So now lets move on to the automation, as inserting all these reports manually wouldn't exactly be reasonable.
 
