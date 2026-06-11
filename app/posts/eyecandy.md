@@ -7,7 +7,7 @@ excerpt: "Trying out some stuff from crackmes.one."
 
 I've been trying to do some crackmes from [crackmes.one](https://crackmes.one), and thought it'd be an interesting exercise to write up my solutions. I've wanted to post some different things here for quite a while now anyway, I just haven't been able to think of anything until now. There may be more of these in the future, there may not be, who knows? Anyway, on to my solution to EyeCandyLOCKED.
 
-This was a pretty simple one, but I did come across some interesting things while doing it that I wasn't expecting. It does have a difficulty rating of 1.0, so I suppose that tracks.
+This was a pretty simple one, but I did come across some interesting things while doing it that I wasn't expecting. It does have a difficulty rating of 1.0, so I suppose that tracks. It can be found [here](https://crackmes.one/crackme/5ab77f5b33c5d40ad448c563).
 
 To start with, let's run the binary which results in the following:
 
